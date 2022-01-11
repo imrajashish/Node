@@ -1,0 +1,18 @@
+var express = require('express')
+
+ const app = express();
+
+ app.get('/allin',function(req,res){
+     res.send("Hello world")
+ })
+ app.get('/all/sd:id',function(req,res){
+     const id = req.params.id
+     res.send("Ash"+ id)
+ })
+
+ app.listen(9000,function(req,res){
+     console.log('Running....')
+ });
+
+
+
