@@ -1,0 +1,31 @@
+var express = require('express');
+
+const app = express();
+
+app.get("/add",function(req,res){
+    res.send("<h1>Hello world from the raj</h1>");
+})
+app.get("/about",function(req,res){
+    res.send("Hello world from the raj about this page")
+})
+
+app.get("/temp",function(req,res){
+    res.send([{
+        id: 1,
+        name: "Vinod",
+    },
+    {
+        id: 1,
+        name: "kdjhv",
+    },
+    {
+        id: 1,
+        name: "Raj",
+    }
+]);
+});
+ 
+
+app.listen(9000,function(res,req){
+    console.log("Running port.....")
+})
